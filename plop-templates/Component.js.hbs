@@ -1,0 +1,25 @@
+import React, { useContext } from 'react';
+
+import { ThemeContext } from 'styled-components';
+
+import { Styled{{pascalCase name}} } from './Styled{{pascalCase name}}';
+
+const {{pascalCase name}} = () => {
+    const theme = useContext(ThemeContext);
+    return (
+      <Styled{{pascalCase name}}>
+        {{pascalCase name}}
+      </Styled{{pascalCase name}}>
+    );
+};
+
+{{pascalCase name}}.displayName = '{{pascalCase name}}';
+
+let {{pascalCase name}}Doc;
+if (process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line global-require
+  {{pascalCase name}}Doc = require('./doc').doc({{pascalCase name}});
+}
+const {{pascalCase name}}Wrapper = {{pascalCase name}}Doc || {{pascalCase name}};
+
+export { {{pascalCase name}}Wrapper as {{pascalCase name}} };

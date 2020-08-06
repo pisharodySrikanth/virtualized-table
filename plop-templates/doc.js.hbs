@@ -1,0 +1,23 @@
+import { describe /* , PropTypes */ } from 'react-desc';
+
+export const doc = {{pascalCase name}} => {
+
+    const Documented{{pascalCase name}} = describe({{pascalCase name}})
+        .description('A {{pascalCase name}}.')
+        .details(
+        `You can provide a single function child that will be called with
+        'hover' and 'focus' keys. This allows you to customize the rendering
+        of the Button in those cases.`,
+        )
+        .usage(
+            `import { {{pascalCase name}} } from 'mnet-lib';
+        <{{pascalCase name}} />`,
+        )
+        .intrinsicElement('div');
+
+    Documented{{pascalCase name}}.propTypes = {
+
+    }
+
+    return Documented{{pascalCase name}};
+}

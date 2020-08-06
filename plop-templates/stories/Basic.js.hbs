@@ -1,0 +1,13 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+
+import { MnetUIBase } from 'mnet-ui-base';
+import { {{pascalCase name}} } from '../';
+
+const Basic{{pascalCase name}} = (/*props*/) => (
+  <MnetUIBase>
+      <{{pascalCase name}} />
+  </MnetUIBase>
+);
+
+storiesOf('{{pascalCase name}}', module).add('Basic', () => <Basic{{pascalCase name}} />);
