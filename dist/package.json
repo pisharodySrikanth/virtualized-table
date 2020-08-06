@@ -39,9 +39,6 @@
     "styled-components": ">= 4.X"
   },
   "dependencies": {
-    "@testing-library/dom": "^6.1.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.1.3",
     "css": "^2.2.3",
     "hoist-non-react-statics": "^3.2.0",
     "markdown-to-jsx": "^6.9.1",
@@ -53,6 +50,9 @@
     "recompose": "^0.30.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "^6.1.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.1.3",
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.0.0",
