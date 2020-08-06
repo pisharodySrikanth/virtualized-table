@@ -9,18 +9,17 @@
     "./es6/contexts/ThemeContext/ThemeContext.js"
   ],
   "description": "a reusable componenet for changelog panel",
-  "bugs": "http://tree.mn/react-ui/mnet-reporting-ui/issues",
+  "bugs": "http://tree.mn/srikanth.p/virtualized-table/issues",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "http://tree.mn/react-ui/mnet-reporting-ui.git"
+    "url": "http://tree.mn/srikanth.p/virtualized-table.git"
   },
   "engine-strict": true,
   "engines": {
     "node": ">= 8"
   },
   "scripts": {
-    "prepare": "install-peers",
     "build": "webpack --mode production && babel ./src/js/ --ignore '__tests__' --out-dir ./dist --copy-files && cross-env BABEL_ENV=es6 babel ./src/js/ --ignore '__tests__' --out-dir ./dist/es6 --copy-files",
     "lint": "eslint src",
     "lint-fix": "eslint src --fix",
@@ -97,7 +96,6 @@
     "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-react-hooks": "^2.2.0",
     "fs-extra": "^8.1.0",
-    "install-peers-cli": "^2.2.0",
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0",
     "jest-styled-components": "^6.2.0",
@@ -106,15 +104,12 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.8.0",
-    "react": ">= 16.6.1",
     "react-dev-utils": "^9.0.3",
-    "react-dom": ">= 16.6.1",
     "react-test-renderer": "^16.8.3",
     "regenerator-runtime": "^0.13.1",
     "require-reload": "^0.2.2",
     "simple-git": "^1.95.0",
     "storybook-chromatic": "^2.2.2",
-    "styled-components": ">= 4.X",
     "tarball-extract": "^0.0.6",
     "typescript": "^3.6.4",
     "webpack": "^4.39.3",
@@ -143,7 +138,8 @@
   },
   "pre-commit": [
     "lint-fix",
-    "prettier"
+    "prettier",
+    "test"
   ],
   "bundlesize": [
     {
