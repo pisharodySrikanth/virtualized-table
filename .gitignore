@@ -12,7 +12,6 @@ coverage
 package-lock.json
 
 # production
-dist
 storybook-static
 
 #logs

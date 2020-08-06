@@ -54,6 +54,7 @@ const BasicVirtualizedTable = (/* props */) => {
           data={data}
           cellRenderer={cellRenderer}
           scrollContainer={divRef}
+          fixedColumnCount={2}
         />
       </div>
     </MnetUIBase>
