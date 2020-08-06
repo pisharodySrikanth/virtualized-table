@@ -5,15 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getSimpleData = void 0;
 
-const getSimpleData = (rows, columns) => {
-  const headerData = [];
-  const data = [];
-  const headerRows = 2;
+var getSimpleData = function getSimpleData(rows, columns) {
+  var headerData = [];
+  var data = [];
+  var headerRows = 2;
 
-  for (let i = 0; i < headerRows; i += 1) {
-    const row = [];
+  for (var i = 0; i < headerRows; i += 1) {
+    var row = [];
 
-    for (let j = 0; j < columns; j += 1) {
+    for (var j = 0; j < columns; j += 1) {
       if (i === 0) {
         if (j % 2 === 0) {
           row.push({
@@ -31,36 +31,36 @@ const getSimpleData = (rows, columns) => {
     headerData.push(row);
   }
 
-  for (let i = 0; i < columns; i += 1) {
+  for (var _i = 0; _i < columns; _i += 1) {
     headerData[0].push({
-      children: "Column ".concat(i + 1)
+      children: "Column ".concat(_i + 1)
     });
   }
 
-  for (let i = 0; i < rows; i += 1) {
-    const row = [];
+  for (var _i2 = 0; _i2 < rows; _i2 += 1) {
+    var _row = [];
 
-    for (let j = 0; j < columns; j += 1) {
-      if (j === 0) {
-        if (i % 3 === 0) {
-          row.push({
-            children: "Rowspanned Cell [".concat(i + 1, ", ").concat(j + 1, "]"),
+    for (var _j = 0; _j < columns; _j += 1) {
+      if (_j === 0) {
+        if (_i2 % 3 === 0) {
+          _row.push({
+            children: "Rowspanned Cell [".concat(_i2 + 1, ", ").concat(_j + 1, "]"),
             rowSpan: 3
           });
         }
       } else {
-        row.push({
-          children: "Cell [".concat(i + 1, ", ").concat(j + 1, "]")
+        _row.push({
+          children: "Cell [".concat(_i2 + 1, ", ").concat(_j + 1, "]")
         });
       }
     }
 
-    data.push(row);
+    data.push(_row);
   }
 
   return {
-    headerData,
-    data
+    headerData: headerData,
+    data: data
   };
 };
 

@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 var _react = _interopRequireWildcard(require("react"));
 
 var _react2 = require("@storybook/react");
@@ -12,7 +14,7 @@ var _generateData = require("./generateData");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -20,27 +22,22 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-const {
-  headerData,
-  data
-} = (0, _generateData.getSimpleData)(500, 15);
+var _getSimpleData = (0, _generateData.getSimpleData)(500, 15),
+    headerData = _getSimpleData.headerData,
+    data = _getSimpleData.data;
 
-const BasicVirtualizedTable = () =>
+var BasicVirtualizedTable = function BasicVirtualizedTable()
 /* props */
 {
-  const divRef = (0, _react.useRef)(null);
+  var divRef = (0, _react.useRef)(null);
 
-  const cellRenderer = (_ref) => {
-    let {
-      style,
-      cell,
-      ref
-    } = _ref;
-    const {
-      gridType,
-      children
-    } = cell;
-    return /*#__PURE__*/_react.default.createElement("div", {
+  var cellRenderer = function cellRenderer(_ref) {
+    var style = _ref.style,
+        cell = _ref.cell,
+        ref = _ref.ref;
+    var gridType = cell.gridType,
+        children = cell.children;
+    return /*#__PURE__*/_react["default"].createElement("div", {
       style: _objectSpread(_objectSpread({
         display: 'flex',
         justifyContent: 'center',
@@ -57,7 +54,7 @@ const BasicVirtualizedTable = () =>
     }, children);
   };
 
-  return /*#__PURE__*/_react.default.createElement(_mnetUiBase.MnetUIBase, null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       height: '100%',
       overflow: 'auto',
@@ -65,7 +62,7 @@ const BasicVirtualizedTable = () =>
       maxHeight: 500
     },
     ref: divRef
-  }, /*#__PURE__*/_react.default.createElement(_.VirtualizedTable, {
+  }, /*#__PURE__*/_react["default"].createElement(_.VirtualizedTable, {
     headerData: headerData,
     data: data,
     cellRenderer: cellRenderer,
@@ -74,4 +71,6 @@ const BasicVirtualizedTable = () =>
   })));
 };
 
-(0, _react2.storiesOf)('VirtualizedTable', module).add('Basic', () => /*#__PURE__*/_react.default.createElement(BasicVirtualizedTable, null));
+(0, _react2.storiesOf)('VirtualizedTable', module).add('Basic', function () {
+  return /*#__PURE__*/_react["default"].createElement(BasicVirtualizedTable, null);
+});
