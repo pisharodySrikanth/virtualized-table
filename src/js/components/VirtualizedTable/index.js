@@ -48,6 +48,7 @@ const VirtualizedTable = forwardRef((props, componentRef) => {
                     isScrolling={isScrolling}
                     onScroll={onScroll}
                     height={height}
+                    fixedColumnCount={props.fixedColumnCount}
                   />
                   <StyledBody
                     className="virtualized-table-body"
@@ -65,6 +66,7 @@ const VirtualizedTable = forwardRef((props, componentRef) => {
                     isScrolling={isScrolling}
                     onScroll={onScroll}
                     height={height}
+                    fixedColumnCount={props.fixedColumnCount}
                   />
                 </>
               )}
@@ -85,12 +87,14 @@ VirtualizedTable.propTypes = {
   scrollContainer: PropTypes.object.isRequired,
   minRowHeight: PropTypes.number,
   minColumnWidth: PropTypes.number,
+  fixedColumnCount: PropTypes.number,
 };
 
 VirtualizedTable.defaultProps = {
   minRowHeight: 50,
   minColumnWidth: 120,
   headerData: [],
+  fixedColumnCount: 0,
 };
 
 let VirtualizedTableDoc;

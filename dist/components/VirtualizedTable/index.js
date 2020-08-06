@@ -64,7 +64,8 @@ var VirtualizedTable = /*#__PURE__*/(0, _react.forwardRef)(function (props, comp
           scrollLeft: scrollLeft,
           isScrolling: isScrolling,
           onScroll: onScroll,
-          height: height
+          height: height,
+          fixedColumnCount: props.fixedColumnCount
         }), /*#__PURE__*/_react["default"].createElement(_style.StyledBody, {
           className: "virtualized-table-body",
           data: props.data,
@@ -80,7 +81,8 @@ var VirtualizedTable = /*#__PURE__*/(0, _react.forwardRef)(function (props, comp
           scrollLeft: scrollLeft,
           isScrolling: isScrolling,
           onScroll: onScroll,
-          height: height
+          height: height,
+          fixedColumnCount: props.fixedColumnCount
         }));
       });
     });
@@ -93,12 +95,14 @@ VirtualizedTable.propTypes = {
   data: _propTypes["default"].array.isRequired,
   scrollContainer: _propTypes["default"].object.isRequired,
   minRowHeight: _propTypes["default"].number,
-  minColumnWidth: _propTypes["default"].number
+  minColumnWidth: _propTypes["default"].number,
+  fixedColumnCount: _propTypes["default"].number
 };
 VirtualizedTable.defaultProps = {
   minRowHeight: 50,
   minColumnWidth: 120,
-  headerData: []
+  headerData: [],
+  fixedColumnCount: 0
 };
 var VirtualizedTableDoc;
 

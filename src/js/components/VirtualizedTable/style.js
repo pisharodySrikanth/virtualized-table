@@ -2,29 +2,21 @@ import styled from 'styled-components';
 import GridWrapper from './GridWrapper';
 
 const StyledHeader = styled(GridWrapper)`
-  outline: none;
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0;
-  z-index: 1;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  z-index: 2;
 `;
 
 const StyledBody = styled(GridWrapper)`
-  outline: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  position: relative;
 `;
 
 const FakeScroller = styled.div`
   position: relative;
   overflow-x: auto;
   min-height: 10px;
+  z-index: 2;
   position: ${props => (props.sticky ? 'sticky' : 'relative')};
   bottom: ${props => (props.sticky ? '0px' : 'unset')};
 `;
