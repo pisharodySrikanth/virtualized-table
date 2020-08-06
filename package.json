@@ -42,7 +42,6 @@
     "css": "^2.2.3",
     "hoist-non-react-statics": "^3.2.0",
     "markdown-to-jsx": "^6.9.1",
-    "mnet-ui-base": "mnet-ui/mnet-ui-base#release",
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
     "react-desc": "^4.1.2",
@@ -50,6 +49,7 @@
     "recompose": "^0.30.0"
   },
   "devDependencies": {
+    "mnet-ui-base": "mnet-ui/mnet-ui-base#release",
     "@testing-library/dom": "^6.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.1.3",
