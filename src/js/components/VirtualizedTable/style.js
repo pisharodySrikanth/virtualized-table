@@ -7,6 +7,7 @@ const StyledHeader = styled(GridWrapper)`
   position: sticky !important;
   top: 0;
   z-index: 1;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -14,6 +15,7 @@ const StyledHeader = styled(GridWrapper)`
 
 const StyledBody = styled(GridWrapper)`
   outline: none;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
