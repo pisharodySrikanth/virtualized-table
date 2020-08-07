@@ -27,14 +27,6 @@ const ScrollHandler = forwardRef(
     // exposing api for resetting
     useImperativeHandle(componentRef, () => ({
       recompute: () => {
-        if (headerRef.current) {
-          headerRef.current.clearCache();
-          headerRef.current.recomputeGridSize();
-        }
-        if (gridRef.current) {
-          gridRef.current.clearCache();
-          gridRef.current.recomputeGridSize();
-        }
         setScrollLeft(0);
         setScrolling(false);
       },

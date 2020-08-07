@@ -1,5 +1,6 @@
 import React, {
   useRef,
+  useEffect,
   useMemo,
   useCallback,
   useImperativeHandle,
@@ -38,13 +39,20 @@ const GridWrapper = forwardRef((props, componentRef) => {
   ]);
 
   useImperativeHandle(componentRef, () => ({
-    clearCache: cache.clearAll,
     recomputeGridSize: () => {
       if (gridRef.current) {
         gridRef.current.recomputeGridSize();
       }
     },
   }));
+
+  // clear cache and recompute when data changes
+  useEffect(() => {
+    cache.clearAll();
+    if (gridRef.current) {
+      gridRef.current.recomputeGridSize();
+    }
+  }, [data]);
 
   const cellRenderer = useCallback(
     args => {
