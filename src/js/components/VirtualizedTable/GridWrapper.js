@@ -73,6 +73,7 @@ const GridWrapper = forwardRef((props, componentRef) => {
             style: {
               ...args.style,
               ...cell.style,
+              transform: 'translate3d(0, 0, 0)',
               width: args.parent.props.columnWidth,
             },
             cell,

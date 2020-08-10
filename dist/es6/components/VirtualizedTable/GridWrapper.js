@@ -226,6 +226,7 @@ var GridWrapper = /*#__PURE__*/ (0, _react.forwardRef)(function(
                     _objectSpread(_objectSpread({}, args.style), cell.style),
                     {},
                     {
+                      transform: 'translate3d(0, 0, 0)',
                       width: args.parent.props.columnWidth,
                     },
                   ),
