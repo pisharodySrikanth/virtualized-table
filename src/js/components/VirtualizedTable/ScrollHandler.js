@@ -30,6 +30,13 @@ const ScrollHandler = forwardRef(
         setScrollLeft(0);
         setScrolling(false);
       },
+      forceUpdate: () => {
+        if (!headerRef.current || !gridRef.current) {
+          return;
+        }
+        headerRef.current.forceUpdate();
+        gridRef.current.forceUpdate();
+      },
     }));
 
     // updating fake scroller if scrolled on grid body

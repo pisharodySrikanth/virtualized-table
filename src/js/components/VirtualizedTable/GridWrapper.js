@@ -44,6 +44,11 @@ const GridWrapper = forwardRef((props, componentRef) => {
         gridRef.current.recomputeGridSize();
       }
     },
+    forceUpdate: () => {
+      if (gridRef.current) {
+        gridRef.current.forceUpdate();
+      }
+    },
   }));
 
   // clear cache and recompute when data changes

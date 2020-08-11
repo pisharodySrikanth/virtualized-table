@@ -186,6 +186,14 @@ var ScrollHandler = /*#__PURE__*/ (0, _react.forwardRef)(function(
         setScrollLeft(0);
         setScrolling(false);
       },
+      forceUpdate: function forceUpdate() {
+        if (!headerRef.current || !gridRef.current) {
+          return;
+        }
+
+        headerRef.current.forceUpdate();
+        gridRef.current.forceUpdate();
+      },
     };
   }); // updating fake scroller if scrolled on grid body
 

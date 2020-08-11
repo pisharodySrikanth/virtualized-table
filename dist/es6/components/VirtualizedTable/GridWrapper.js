@@ -190,6 +190,11 @@ var GridWrapper = /*#__PURE__*/ (0, _react.forwardRef)(function(
           gridRef.current.recomputeGridSize();
         }
       },
+      forceUpdate: function forceUpdate() {
+        if (gridRef.current) {
+          gridRef.current.forceUpdate();
+        }
+      },
     };
   }); // clear cache and recompute when data changes
 
