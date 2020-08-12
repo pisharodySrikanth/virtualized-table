@@ -19,7 +19,4 @@ export default create({
   inputBorder: 'rgba(0,0,0,.1)',
   inputTextColor: '#333333',
   inputBorderRadius: 4,
-
-  brandImage: 'https://mnet-ui-base.netlify.com/img/logos/mnetb.svg',
-  brandUrl: 'https://mnet-ui-base.netlify.com/',
 });
