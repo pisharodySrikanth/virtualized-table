@@ -17,6 +17,7 @@ const BasicVirtualizedTable = (/* props */) => {
         style={{
           display: 'flex',
           justifyContent: 'center',
+          alignItems: 'center',
           padding: '5px',
           boxSizing: 'border-box',
           ...(gridType === 'header'

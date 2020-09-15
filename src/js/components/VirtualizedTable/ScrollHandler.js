@@ -100,6 +100,9 @@ const ScrollHandler = forwardRef(
                 scrollChildRef.current = ref;
                 registerChild(ref);
               }}
+              className={`${scrollTop > 0 ? 'vertically-scrolled' : ''} ${
+                scrollLeft > 0 ? 'horizontally-scrolled' : ''
+              }`}
             >
               {children({
                 height,

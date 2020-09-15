@@ -161,3 +161,5 @@ export const defaultCellRenderer = ({ key, style, cell, ref }) => {
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <div {...rest} style={style} key={key} ref={ref} />;
 };
+
+export const defaultRangeRenderer = (args, renderer) => renderer(args);

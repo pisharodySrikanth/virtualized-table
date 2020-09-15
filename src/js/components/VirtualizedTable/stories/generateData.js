@@ -1,5 +1,3 @@
-import faker from 'faker';
-
 export const getSimpleData = (rows, columns) => {
   const headerData = [];
   const data = [];
@@ -44,7 +42,7 @@ export const getSimpleData = (rows, columns) => {
         }
       } else {
         row.push({
-          children: faker.lorem.text(1),
+          children: `Cell [${i + 1}, ${j + 1}]`,
         });
       }
     }

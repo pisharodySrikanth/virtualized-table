@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 
 import { AutoSizer, ColumnSizer } from 'react-virtualized';
 import ScrollHandler from './ScrollHandler';
@@ -48,6 +47,7 @@ const VirtualizedTable = forwardRef((props, componentRef) => {
                     isScrolling={isScrolling}
                     onScroll={onScroll}
                     height={height}
+                    fixedColumnCount={props.fixedColumnCount}
                   />
                   <StyledBody
                     className="virtualized-table-body"
@@ -65,6 +65,9 @@ const VirtualizedTable = forwardRef((props, componentRef) => {
                     isScrolling={isScrolling}
                     onScroll={onScroll}
                     height={height}
+                    fixedColumnCount={props.fixedColumnCount}
+                    cacheKeyMapper={props.cacheKeyMapper}
+                    cellRangeRenderer={props.cellRangeRenderer}
                   />
                 </>
               )}
@@ -78,19 +81,11 @@ const VirtualizedTable = forwardRef((props, componentRef) => {
 
 VirtualizedTable.displayName = 'VirtualizedTable';
 
-VirtualizedTable.propTypes = {
-  cellRenderer: PropTypes.func.isRequired,
-  headerData: PropTypes.array,
-  data: PropTypes.array.isRequired,
-  scrollContainer: PropTypes.object.isRequired,
-  minRowHeight: PropTypes.number,
-  minColumnWidth: PropTypes.number,
-};
-
 VirtualizedTable.defaultProps = {
   minRowHeight: 50,
   minColumnWidth: 120,
   headerData: [],
+  fixedColumnCount: 0,
 };
 
 let VirtualizedTableDoc;
